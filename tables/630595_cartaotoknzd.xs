@@ -3,7 +3,10 @@ table CARTAOTOKNZD {
 
   schema {
     int id
-    timestamp created_at?=now
+    timestamp created_at?=now {
+      visibility = "private"
+    }
+  
     text token? filters=trim
     text codigoclienteassas? filters=trim
     int cliente_id? {

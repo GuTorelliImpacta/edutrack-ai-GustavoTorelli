@@ -4,7 +4,10 @@ table TTOKENIZACAO {
 
   schema {
     int id
-    timestamp created_at?=now
+    timestamp created_at?=now {
+      visibility = "private"
+    }
+  
     int cliente_id?=168 {
       table = "user"
     }

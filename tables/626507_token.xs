@@ -3,7 +3,10 @@ table Token {
 
   schema {
     int id
-    timestamp created_at?=now
+    timestamp created_at?=now {
+      visibility = "private"
+    }
+  
     text plataforma? filters=trim
     text Token? filters=trim
     text Codigoclienteasaas? filters=trim

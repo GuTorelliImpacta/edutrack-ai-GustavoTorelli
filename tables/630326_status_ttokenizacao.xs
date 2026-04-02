@@ -3,7 +3,10 @@ table STATUS_TTOKENIZACAO {
 
   schema {
     int id
-    timestamp created_at?=now
+    timestamp created_at?=now {
+      visibility = "private"
+    }
+  
     text status? filters=trim
   }
 

@@ -4,7 +4,10 @@ table CEP {
 
   schema {
     int id
-    timestamp created_at?=now
+    timestamp created_at?=now {
+      visibility = "private"
+    }
+  
     text CEP? filters=trim
     text uf? filters=trim
     text Estado? filters=trim

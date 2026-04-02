@@ -3,7 +3,10 @@ table Pedidos {
 
   schema {
     int id
-    timestamp created_at?=now
+    timestamp created_at?=now {
+      visibility = "private"
+    }
+  
     int dados_adicionais_id? {
       table = "dados_adicionais"
     }
