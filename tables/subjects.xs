@@ -10,7 +10,7 @@ table subjects {
     text code? filters=trim
     text description? filters=trim
     text semester? filters=trim
-    float workload?
+    decimal workload?
     int credits?
     int user_id {
       table = "user"
